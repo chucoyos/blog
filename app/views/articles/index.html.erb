@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+  <h1><%= article.title%></h1>
+  <div>
+    <h4><%= article.body%></h4>
+    <p>Visitas: <%= article.visits_count%></p>
+    </div>
+<% end %>
