@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+.be-red {
+    background-color: red;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: cornsilk;
+    background-color: crimson;
+}
+
+nav {
+    padding: 5px;
+}
+
+.no-list {
+    list-style: none;
+}
+
+.logo {
+    font-size: 20px;
+}
