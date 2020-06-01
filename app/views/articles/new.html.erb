@@ -2,7 +2,11 @@
 <h1> Crear artículo </h1>
 
 <%= form_for(@article) do |f| %>
- 
+ <% @article.errors.full_messages.each do |message| %>
+ <div class="w3-red w3-margin">
+ *<%=message%>
+ </div>
+ <% end %>
 <%= f.text_field :title, placeholder: "Título", 
 :class => "w3-black w3-input w3-border w3-round w3-margin" %>
 <%= f.text_area :body, placeholder: "Escriba su artículo", 

@@ -17,7 +17,11 @@ class  ArticlesController < ApplicationController
       @article = Article.new({title: params[:article] [:title],
       body: params[:article] [:body]})
 
-      @article.save
-      redirect_to @article
+      if @article.save
+        redirect_to @article
+      else
+        render :new
+      end
+      
     end
 end
