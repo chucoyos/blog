@@ -14,8 +14,7 @@ class  ArticlesController < ApplicationController
     end
     #POS /articles/new
     def create
-      @article = Article.new({title: params[:article] [:title],
-      body: params[:article] [:body]})
+      @article = Article.new(article_params)
 
       if @article.save
         redirect_to @article
@@ -33,5 +32,11 @@ class  ArticlesController < ApplicationController
 
     def update
       #@article.update_atributes({title: 'Nuevo Titulo'})
+    end
+
+    private
+
+    def article_params
+      params.require(:article).permit(:title, :body)
     end
 end
