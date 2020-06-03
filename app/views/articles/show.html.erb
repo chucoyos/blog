@@ -1,3 +1,3 @@
 <h1><%= @article.title%></h1>
 <h4><%= @article.body%></h4>
-<p>Visitas <%= @article.visits_count%>
+<%= link_to "Editar", edit_article_path(@article)%>
