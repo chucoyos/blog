@@ -1,4 +1,6 @@
-<h2>Log in</h2>
+<div class="w3-container w3-black w3-margin">
+<div class="w3-container w3-display-middle">
+<h2>Iniciar Sesión</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -7,7 +9,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password, "Conraseña" %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
@@ -18,8 +20,8 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="actions w3-margin-top">
+    <%= f.submit "Iniciar Sesión", class:"w3-btn w3-hover-red w3-round-large" %>
   </div>
 <% end %>
 
