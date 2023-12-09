@@ -1,0 +1,7 @@
+<%= form_with do |f| %>
+  <div>
+    <%= f.label :title, style: 'display: block'%>
+    <%= f.text_field :title, class: 'p-1 text-black'%>
+    <%= f.submit 'Save article', class: 'border rounded-m px-2 py-1'%>
+  </div>
+<% end %>

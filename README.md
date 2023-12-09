@@ -29,4 +29,5 @@ Things you may want to cover:
 
 * rails db:migrate
 
+* rake tailwindcss:watch
 * ...
