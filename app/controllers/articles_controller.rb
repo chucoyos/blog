@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[show destroy]
+  before_action :set_article, only: %i[show destroy edit]
   def index
     @articles = Article.all
   end
@@ -21,6 +21,9 @@ class ArticlesController < ApplicationController
           format.html { render new, status: :unprocessable_entity}
       end
     end
+  end
+
+  def edit
   end
 
   def destroy

@@ -5,6 +5,7 @@
   <p><%= @article.body %>
 </div>
 <div>
+  <%= link_to 'edit', edit_article_path(@article), class: 'border border-slate-400 px-2 mt-1 rounded-sm'%>
   <%= link_to 'Delete article', @article, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'border border-slate-400 px-2 mt-1 rounded-sm' %>
   <%= link_to 'home', root_path, class: 'border border-slate-400 px-2 mt-1 rounded-sm' %>
 </div>
