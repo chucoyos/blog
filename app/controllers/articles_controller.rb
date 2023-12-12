@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: %i[show destroy edit]
+  before_action :set_article, only: %i[show destroy edit update]
   def index
     @articles = Article.all
   end
@@ -24,6 +24,16 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @article.update(article_params)
+        format.html { redirect_to @article, notice: 'Article updated successfully'}
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
