@@ -1,13 +1,9 @@
-<div class=''>
+<div class='flex flex-col gap-4'>
   <h1 class='text-center'>Articles</h1>
   <ul>
-   <% @articles.each do |article| %>
-     <li>
-       <p>Title: <%= article.title %></p>
-       <p>Body: <%= article.body %></p>
-     <%= link_to 'Show', article_path(article), class: 'border border-slate-400 px-2 mt-1 rounded-sm' %>
-     </li>
-   <% end %>
+    <%= render @articles %>
   </ul>
-  <%= link_to 'New article', new_article_path, class: 'border border-slate-400 rounded-sm'%>
+  <div>
+    <%= link_to 'New article', new_article_path, class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer'%>
+  </div>
 </div>

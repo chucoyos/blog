@@ -2,8 +2,11 @@
 <div class='flex flex-col gap-2'>
   <%= f.label :title, style: 'display: block'%>
   <%= f.text_field :title, class: 'p-1 bg-slate-800 border rounded-lg hover:bg-slate-600'%>
-  <%= f.label :body, style: 'display: blck'%>
+  <%= f.label :body, style: 'display: block'%>
   <%= f.text_area :body, class: 'p-1 bg-slate-800 border rounded-lg hover:bg-slate-600'%>
-  <%= f.submit 'Save article', class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer'%>
+  <div class='flex gap-2'>
+    <%= f.submit 'Save article', class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer'%>
+    <%= link_to 'Cancel', articles_path, class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer' %>
+  </div>
 </div>
 <% end %>

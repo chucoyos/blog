@@ -4,9 +4,9 @@
   <h3><%= @article.title %></h3>
   <p><%= @article.body %>
 </div>
-<div>
-  <%= link_to 'edit', edit_article_path(@article), class: 'border border-slate-400 px-2 mt-1 rounded-sm'%>
-  <%= link_to 'Delete article', @article, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'border border-slate-400 px-2 mt-1 rounded-sm' %>
-  <%= link_to 'home', root_path, class: 'border border-slate-400 px-2 mt-1 rounded-sm' %>
+<div class='flex gap-2'>
+  <%= link_to 'Edit', edit_article_path(@article), class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer'%>
+  <%= link_to 'Delete', @article, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'}, class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer' %>
+  <%= link_to 'Home', root_path, class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer' %>
 </div>
 

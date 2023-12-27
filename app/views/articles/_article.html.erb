@@ -1,0 +1,7 @@
+<li class='flex flex-col gap-2 border rounded my-2 py-2 px-2'>
+  <p>Title: <%= article.title %></p>
+  <p>Body: <%= article.body %></p>
+  <div>
+  <%= link_to 'Show', article_path(article), class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer' %>
+  <%= link_to 'Edit', edit_article_path(article), class: 'border border-slate-500 hover:border-slate-400 rounded-lg px-2 py-1 bg-slate-700 cursor-pointer' %>
+</li>
