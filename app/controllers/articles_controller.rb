@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show destroy edit update]
+  
   def index
     @articles = Article.all
   end
@@ -12,13 +13,12 @@ class ArticlesController < ApplicationController
   end
 
   def create
-      @article = Article.new(article_params)
-
-      respond_to do |format|
-        if @article.save
-        format.html { redirect_to article_path(@article), notice: 'Article was created'}
-        else
-          format.html { render new, status: :unprocessable_entity}
+    @article = Article.new(article_params)
+    respond_to do |format|
+      if @article.save
+      format.html { redirect_to article_path(@article), notice: 'Article was created'}
+      else
+        format.html { render new, status: :unprocessable_entity}
       end
     end
   end
@@ -54,5 +54,5 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body)
   end
-    
+   
 end
