@@ -1,4 +1,16 @@
 <%= form_with(model: @article) do |f| %>
+<% if @article.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+        <% @article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
 <div class='flex flex-col gap-2'>
   <%= f.label :title, style: 'display: block'%>
   <%= f.text_field :title, class: 'p-1 bg-slate-800 border rounded-lg hover:bg-slate-600'%>
