@@ -1,10 +1,10 @@
-<%= form_with(model: @article) do |f| %>
-<% if @article.errors.any? %>
-    <div id="error_explanation" class="bg-red-900 text-red-200 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+<%= form_with model: article do |f| %>
+<% if  article.errors.any? %>
+    <div id="error_explanation" class="bg-red-950 text-red-100 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
-        <% @article.errors.each do |error| %>
+        <% article.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
