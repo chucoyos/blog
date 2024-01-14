@@ -1,5 +1,6 @@
 <li id='<%= comment.id %>', class='flex gap-2 bg-slate-500 rounded-xl py-1 px-2'>
   <span class='font-bold'>👦️ <%= comment.commenter %></span> 
   <span> <%= comment.body %> </span>
-  <%= link_to '🗑️', articles_path, class: 'bg-blue-900 py-1 px-2 rounded ml-auto'%>
+  <span class='text-xs'> <%= comment.updated_at %> </span>
+  <%= link_to '🗑️', [comment.article, comment], data: {turbo_method: :delete, turbo_confirm: 'Delete comment?'}, class: 'bg-blue-900 py-1 px-2 rounded ml-auto'%>
 </li>
