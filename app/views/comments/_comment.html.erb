@@ -1,6 +1,9 @@
-<li id='<%= comment.id %>', class='flex gap-2 bg-slate-500 rounded-xl py-1 px-2'>
-  <span class='font-bold'>👦️ <%= comment.commenter %></span> 
-  <span> <%= comment.body %> </span>
-  <span class='text-xs'> <%= comment.updated_at %> </span>
-  <%= link_to '🗑️', [comment.article, comment], data: {turbo_method: :delete, turbo_confirm: 'Delete comment?'}, class: 'bg-blue-900 py-1 px-2 rounded ml-auto'%>
+<li id='<%= comment.id %>', class='flex gap-2 items-center bg-slate-500 rounded-xl py-1 px-2'>
+  <div class='flex gap-2'>
+    <p class='font-semibold'>👦️ <%= comment.commenter %></p> 
+    <p> <%= comment.body %> </p>
+  </div>
+  <%= link_to '🗑️', [comment.article, comment], 
+      data: {turbo_method: :delete, turbo_confirm: 'Delete comment?'}, 
+      class: 'bg-slate-700 rounded ml-auto'%>
 </li>

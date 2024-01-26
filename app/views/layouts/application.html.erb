@@ -11,10 +11,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class='bg-slate-900 text-slate-100'>
+  <body class='bg-slate-900 text-slate-100 relative text-sm'>
     <%= render 'layouts/nav' %>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <div class='absolute top-16 right-8 py-2 px-6 rounded <%= "bg-green-900" if notice.present? %>'>
+    <main class="container mt-28 mx-auto px-5 flex w-full">
+      <div class='absolute top-8 right-8 py-2 px-6 rounded <%= "bg-green-900" if notice.present? %>'>
         <%= notice %>
       </div>
       <%= yield %>
