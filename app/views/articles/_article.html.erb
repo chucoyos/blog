@@ -1,7 +1,7 @@
 <li class='flex flex-col gap-4 rounded-lg bg-slate-500 my-2 p-4 px-4 shadow-xl'>
-  <div class='bg-slate-950 p-4 rounded-lg shadow-2xl'>
-    <p>Title: <%= article.title %></p>
-    <p>Body: <%= article.body %></p>
+  <div class='bg-gradient-to-r from-slate-950 to-slate-700 p-4 rounded-lg shadow-2xl'>
+    <p><%= article.title %></p>
+    <p><%= article.body %></p>
   </div>
   <div class='flex gap-4'>
     <%= link_to 'See Article', article_path(article), class: 'bg-slate-700 text-slate-400 hover:bg-slate-400 hover:text-slate-700 font-semibold shadow-xl hover:shadow-2xl rounded-lg px-6 py-2 cursor-pointer' %>  
